@@ -9,6 +9,11 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         request: './request.html',
       },
+      input: [
+        'request.js',
+        'main.js'
+      ],
+
     },
   },
 })
