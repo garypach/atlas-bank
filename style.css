@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: ui-sans-serif, Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+.gradient-animation {
+  background: linear-gradient(
+    0deg,
+    #e8e0d9,
+    #e7cdd3,
+    #cdd5df,
+    #e8e0d9,
+    #e7cdd3
+  );
+  background-size: 100% 300%;
+
+  -webkit-animation: AnimationName 40s linear infinite;
+  -moz-animation: AnimationName 40s linear infinite;
+  animation: AnimationName 40s linear infinite;
+}
+.gradient-text {
+  background-size: 100% 600%;
+  background: linear-gradient(
+    0deg,
+    #e8e0d9,
+    #e7cdd3,
+    #cdd5df,
+    #e8e0d9,
+    #e7cdd3
+  );
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: AnimationName 50s infinite linear;
+}
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 0 100%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+.footnotes {
+  grid-template-columns: 1.5rem 1fr;
+  column-gap: 0.5rem;
+}
+
+.label-start {
+  transform: translateY(2.4rem) translate(21px);
+}
+
+.label-end {
+  transform: translateY(1.75rem) translate(21px);
+  font-size: 0.75rem;
+}
+
+.input-error {
+  border-color: red;
+  caret-color: red;
+}
+
+select {
+  /* you should keep these firsts rules in place to maintain cross-browser behaviour */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  background-image: url("/arrow.svg");
+  background-position: 92.75% center;
+  background-repeat: no-repeat;
+  outline: none;
+}
+
+.checkbox-container {
+  position: relative;
+  padding-left: 35px;
+  font-size: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 28px;
+  width: 29px;
+  background-color: #fafafa;
+  border: 1px solid #001391;
+  border-radius: 6px;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #eee;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #001391;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+  left: 10.5px;
+  top: 5px;
+  width: 7px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
