@@ -2,9 +2,9 @@
 export default {
   content: [
     "./index.html",
-    "./request.html",
+    "./request/request.html",
     "./main.js",
-    "./request.js",
+    "./request/request.js",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
